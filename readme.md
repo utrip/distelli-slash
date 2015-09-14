@@ -11,8 +11,8 @@ Build, test and deploy your app entirely from Slack w/ the Slash command: `/dist
 4. Connect your application to the forked repository.
 5. Update the first line of your distelli-manifest.yml file to use your username instead of **Distelli**.
 6. Create an environment named **DistelliSlash-Prod**, add a server to that environment.
-7. Build your forked repository.
-8. Add a server and deploy the latest release of your app to **DistelliSlash-Prod**.
+7. Build your application ##DistelliSlash**.
+8. Add a server and deploy the latest release of **DistelliSlash** to environment **DistelliSlash-Prod**.
 9. Create an apiToken. (https://www.distelli.com/username/settings?section=API)
 10. Create the following environment variables: `USERNAME=your-userName` & `APITOKEN=your-apiToken` (https://www.distelli.com/username/envs/distellislash-prod)
 
