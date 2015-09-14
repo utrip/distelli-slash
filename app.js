@@ -214,7 +214,12 @@ function processQuery(query, username, callback){
       + secrets.distelli.apiToken, function (error, response, body) {
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
-          returnData = "Env *" + envName + "* has been restarted" + " " + username;
+          returnData = "Env *" + envName + "* has been restarted " + username;
+          callback(returnData);
+        }
+        else{
+          var contents = JSON.parse(body);
+          returnData = "That environment does not exist " + username;
           callback(returnData);
         }
       })
@@ -278,6 +283,7 @@ function processQuery(query, username, callback){
       })
   }
 
+  //Help
   else if(query == 'help'){
     returnData = "Here are the commands I recognize:\n•List Apps\n•List Builds\n•List Envs\n•List Servers\n" +
     "•List Servers for Env [Env Name]\n•List Release for App [App Name]\n•Create App [App Name]\n" +
@@ -286,6 +292,7 @@ function processQuery(query, username, callback){
     callback(returnData);
   }
 
+  //If command is not understood
   else{
     returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n•List Apps\n" +
     "•List Builds\n•List Envs\n•List Servers\n•List Servers for Env [Env Name]\n•List Release for App [App Name]\n" +
