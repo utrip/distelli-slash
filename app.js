@@ -296,5 +296,5 @@ function processQuery(query, username, callback){
 }
 
 app.listen(port, function(){
-  console.log('Distelli Bot is alive on port ' + port + '.');
+  console.log('DistelliSlash is alive on port ' + port + '.');
 })
