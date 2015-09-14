@@ -1,6 +1,6 @@
 #Distelli-Slash
 Build, test and deploy your app entirely from Slack w/ the Slash command: `/distelli`.
-![Alt text](http://try.distelli.com/hubfs/screencast_2015-09-14_15-43-55.gif)
+![Alt text](http://try.distelli.com/hubfs/slack.gif)
 
 ##Installation:
 
