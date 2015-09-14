@@ -188,7 +188,7 @@ function processQuery(query, username, callback){
       })
    }
 
-   //Create env [envName]
+   //Create env [envName] for app
    else if(query.substring(0, 9) == "create env"){
     var queryArray = query.split(" ");
     var envName = queryArray[2];
@@ -287,7 +287,7 @@ function processQuery(query, username, callback){
   else if(query == 'help'){
     returnData = "Here are the commands I recognize:\n•List Apps\n•List Builds\n•List Envs\n•List Servers\n" +
     "•List Servers for Env [Env Name]\n•List Release for App [App Name]\n•Create App [App Name]\n" +
-    "•Create Env [Env Name]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
+    "•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
     "•Deploy latest to env [envName]";
     callback(returnData);
   }
@@ -296,7 +296,7 @@ function processQuery(query, username, callback){
   else{
     returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n•List Apps\n" +
     "•List Builds\n•List Envs\n•List Servers\n•List Servers for Env [Env Name]\n•List Release for App [App Name]\n" +
-    "•Create App [App Name]\n•Create Env [Env Name]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
+    "•Create App [App Name]\n•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
     "•Deploy latest to env [envName]";
     callback(returnData);
   }

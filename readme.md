@@ -31,7 +31,7 @@ It should look something like this when you're done:
 4. `List Servers for Env [EnvName]`: List all servers associated with an app enviroment.
 5. `List Releases for App [AppName]`: List all releases associated with an app.
 6. `Create App [App Name]`: Create a Distelli application.
-7. `Create Env [Env Name]`: Create a Distelli environment.
+7. `Create Env [Env Name] for app [AppName]`: Create a Distelli environment.
 8. `Restart Env [Env Name]`: Restart an existing environment.
 9. `Latest release for app [appName]`: Get information on the latest release associated with an app.
 10. `Deploy latest to env [envName]`: Deploy the latest release to an environment.
