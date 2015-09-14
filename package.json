@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexleventer/distelli-bot.git"
+    "url": "https://github.com/alexleventer/distelli-slash.git"
   },
   "author": "Alex Leventer <alexleventer@gmail> (http://www.alexleventer.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexleventer/distelli-bot/issues"
+    "url": "https://github.com/alexleventer/distelli-slash/issues"
   },
-  "homepage": "https://github.com/alexleventer/distelli-bot",
+  "homepage": "https://github.com/alexleventer/distelli-slash",
   "dependencies": {
     "async": "^1.4.2",
     "body-parser": "^1.13.3",
