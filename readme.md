@@ -4,7 +4,7 @@ Build and deploy your app entirely from Slack w/ the Slash command: `/distelli`.
 
 ##Installation:
 
-###Setup within Distelli
+###Set up within Distelli
 1. Fork this repository.
 2. Log into Distelli and create a new Distelli application named **DistelliSlash** (https://www.distelli.com/username/app/new).
 3. If you haven't done so already, connect a GitHub account.
@@ -16,7 +16,7 @@ Build and deploy your app entirely from Slack w/ the Slash command: `/distelli`.
 9. Create an apiToken. (https://www.distelli.com/username/settings?section=API)
 10. Create the following environment variables on environment **distellislash-prod**: `USERNAME=your-userName` & `APITOKEN=your-apiToken` (https://www.distelli.com/username/envs/distellislash-prod)
 
-###Setup within Slack
+###Set up within Slack
 1. Navigate to https://username.slack.com/services/new/slash-commands
 2. In the choose command textbox, enter **/distelli** and hit the green **Add Slash Command Integration** button.
 3. In the URL textbox, enter the IP you deployed your app to with **:3000** at the end to specify port 3000.
