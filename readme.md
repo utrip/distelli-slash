@@ -18,7 +18,7 @@ Build, test and deploy your app entirely from Slack w/ the Slash command: `/dist
 
 ###Setup within Slack
 1. Navigate to https://username.slack.com/services/new/slash-commands
-2. In the choose command textbox, enter */distelli* and hit the green **Add Slash Command Integration** button.
+2. In the choose command textbox, enter **/distelli** and hit the green **Add Slash Command Integration** button.
 3. In the URL textbox, enter the IP you deployed your app to with **:3000** at the end to specify port 3000.
 
 It should look something like this when you're done:
