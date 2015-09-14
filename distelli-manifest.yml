@@ -1,0 +1,20 @@
+#Switch "distelli" to your Distelli username:
+distelli/distelli-bot:
+  PkgInclude:
+    - '*'
+
+  PreRelease:
+    - npm install
+    - npm update
+
+  PreInstall:
+    - sudo apt-get -y update
+    - sudo apt-get -y install nodejs
+    - sudo apt-get -y install npm
+
+  PostInstall:
+    - npm install
+    - npm update
+
+  Exec:
+    - /usr/bin/nodejs app.js

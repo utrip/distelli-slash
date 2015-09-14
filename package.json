@@ -1,0 +1,27 @@
+{
+  "name": "distellibot",
+  "version": "1.0.0",
+  "description": "Build & deploy your Distelli apps via Slack.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexleventer/distelli-bot.git"
+  },
+  "author": "Alex Leventer <alexleventer@gmail> (http://www.alexleventer.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexleventer/distelli-bot/issues"
+  },
+  "homepage": "https://github.com/alexleventer/distelli-bot",
+  "dependencies": {
+    "async": "^1.4.2",
+    "body-parser": "^1.13.3",
+    "distelli": "0.0.9",
+    "express": "^4.13.3",
+    "request": "^2.61.0"
+  }
+}
