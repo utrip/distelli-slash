@@ -21,6 +21,9 @@ Build, test and deploy your app entirely from Slack w/ the Slash command: `/dist
 2. In the choose command textbox, enter */distelli* and hit the green **Add Slash Command Integration** button.
 3. In the URL textbox, enter the IP you deployed your app to with **:3000** at the end to specify port 3000.
 
+It should look something like this when you're done:
+![Alt text](https://monosnap.com/file/IEcnSl09wWXPaHDTEAMpPpXxBXqayz.png)
+
 ##Things you can do:
 1. `List Apps`: List all apps associated with your Distelli account. Use the command `List Apps After [AppName]` to see the next page of results.
 2. `List Builds`: List all builds associated with your Distelli account. Use the command `List Builds After [BuildNum]` to see the next page of results.
