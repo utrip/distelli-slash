@@ -54,7 +54,7 @@ function processQuery(query, username, callback){
           callback(returnData);
         }
         else{
-          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          returnData = "Uh-oh, I didn't recognize that marker " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -98,7 +98,7 @@ function processQuery(query, username, callback){
           callback(returnData);
         }
         else{
-          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          returnData = "Uh-oh, I didn't recognize that marker " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -140,7 +140,7 @@ function processQuery(query, username, callback){
           callback(returnData);
         }
         else{
-          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          returnData = "Uh-oh, I didn't recognize that marker " + " " + username + "!";
           callback(returnData);
         }
       })
