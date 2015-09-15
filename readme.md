@@ -26,7 +26,7 @@ It should look something like this when you're done:
 
 ##Things you can do:
 1. `List Apps`: List all apps associated with your Distelli account. Use the command `List Apps After [AppName]` to see the next page of results.
-2. `List Envs`: List all envs associated with your Distelli account.
+2. `List Envs`: List all envs associated with your Distelli account. Use the command `List Envs After [EnvName]` to see the next page of results.
 3. `List Envs for [AppName]`: List all envs associated with a Distelli app.
 4. `List Builds`: List all builds associated with your Distelli account. Use the command `List Builds After [BuildNum]` to see the next page of results.
 5. `List Servers`: List all servers associated with your Distelli account. Use the command `List Servers After [ServerName]` to see the next page of results.
