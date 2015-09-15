@@ -301,7 +301,8 @@ function processQuery(query, username, callback){
           var contents = JSON.parse(body);
           var returnData = [];
           for(var i = 0; i < contents.releases.length; i++){
-            returnData.push("<" + contents.releases[i].html_url + "|" + contents.releases[i].release_version + contents.releases[i].description + ">");
+            var desc = contents.releases[i].description.substr(0, contents.releases[i].description.indexOf('\n'));
+            returnData.push("<" + contents.releases[i].html_url + "|" + contents.releases[i].release_version + ": " + desc  + ">");
           }
           returnData = "Here are your releases for " + appName + ", " + username + ":\n" + returnData.join("\n");
           callback(returnData);
