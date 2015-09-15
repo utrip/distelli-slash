@@ -138,6 +138,24 @@ function processQuery(query, username, callback){
       })
   }
 
+  //List envs for app [appName]
+  else if(query == "list envs for app"){
+    var queryArray = query.split(" ");
+    var appName = queryArray[4];
+     request('https://api.distelli.com/' + secrets.distelli.username + '/apps/' + appName + '/envs?apiToken='
+      + secrets.distelli.apiToken + '&max_results=25', function (error, response, body) {
+        if(!error && response.statusCode == 200) {
+          var contents = JSON.parse(body);
+          var returnData = [];
+          for(var i =0; i < contents.envs.length; i++){
+            returnData.push(contents.envs[i].app_name + ' / ' + "<" + contents.envs[i].html_url + "|" + contents.envs[i].name + ">");
+          }
+          returnData = "Here are your envs for app " + appName + " " + username + ":\n" + returnData.join("\n");
+          callback(returnData);
+        }
+      })
+  }
+
   //List envs after [envName]
   else if(query.substring(0, 15) == "list envs after"){
     var queryArray = query.split(" ");
@@ -288,7 +306,7 @@ function processQuery(query, username, callback){
     returnData = "Here are the commands I recognize:\n•List Apps\n•List Builds\n•List Envs\n•List Servers\n" +
     "•List Servers for Env [Env Name]\n•List Release for App [App Name]\n•Create App [App Name]\n" +
     "•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
-    "•Deploy latest to env [envName]";
+    "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
     callback(returnData);
   }
 
@@ -297,7 +315,7 @@ function processQuery(query, username, callback){
     returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n•List Apps\n" +
     "•List Builds\n•List Envs\n•List Servers\n•List Servers for Env [Env Name]\n•List Release for App [App Name]\n" +
     "•Create App [App Name]\n•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
-    "•Deploy latest to env [envName]";
+    "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
     callback(returnData);
   }
 }
