@@ -21,7 +21,7 @@ function processQuery(query, username, callback){
   //List apps
   if(query == "list apps"){
     request('https://api.distelli.com/' + secrets.distelli.username + '/apps?apiToken='
-      + secrets.distelli.apiToken + '&max_results=25', function (error, response, body) {
+      + secrets.distelli.apiToken + '&max_results=50', function (error, response, body) {
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           var returnData = [];
@@ -39,7 +39,7 @@ function processQuery(query, username, callback){
     var queryArray = query.split(" ");
     var marker = queryArray[3];
     request('https://api.distelli.com/' + secrets.distelli.username + '/apps?apiToken='
-      + secrets.distelli.apiToken + '&marker=' + marker + '&max_results=25', function (error, response, body) {
+      + secrets.distelli.apiToken + '&marker=' + marker + '&max_results=50', function (error, response, body) {
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           var returnData = [];
@@ -55,7 +55,7 @@ function processQuery(query, username, callback){
   //List builds
   else if(query == "list builds"){
      request('https://api.distelli.com/' + secrets.distelli.username + '/builds?apiToken='
-      + secrets.distelli.apiToken + '&max_results=25&order=desc', function (error, response, body) {
+      + secrets.distelli.apiToken + '&max_results=50&order=desc', function (error, response, body) {
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           var returnData = [];
@@ -74,7 +74,7 @@ function processQuery(query, username, callback){
     var queryArray = query.split(" ");
     var marker = queryArray[3];
     request('https://api.distelli.com/' + secrets.distelli.username + '/builds?apiToken='
-      + secrets.distelli.apiToken + '&marker=' + marker + '&max_results=25', function (error, response, body) {
+      + secrets.distelli.apiToken + '&marker=' + marker + '&max_results=50', function (error, response, body) {
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           var returnData = [];
@@ -91,7 +91,7 @@ function processQuery(query, username, callback){
   //List servers
   else if(query == "list servers"){
     request('https://api.distelli.com/' + secrets.distelli.username + '/servers?apiToken='
-      + secrets.distelli.apiToken + '&max_results=25', function (error, response, body) {
+      + secrets.distelli.apiToken + '&max_results=50', function (error, response, body) {
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           var returnData = [];
