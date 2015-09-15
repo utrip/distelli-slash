@@ -259,6 +259,10 @@ function processQuery(query, username, callback){
           returnData = "Here are your releases for " + appName + ", " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "We couldn't find app " + appName + ", " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
