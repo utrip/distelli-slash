@@ -31,6 +31,10 @@ function processQuery(query, username, callback){
           returnData = "Here are your apps " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
@@ -49,6 +53,10 @@ function processQuery(query, username, callback){
           returnData = "Here are your apps after " + marker + " " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
@@ -64,6 +72,10 @@ function processQuery(query, username, callback){
               + contents.builds[i].commit.committer + " (" + contents.builds[i].status + ")" );
           }
           returnData = "Here are your builds" + " " + username + ":\n" + returnData.join("\n");
+          callback(returnData);
+        }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -85,6 +97,10 @@ function processQuery(query, username, callback){
           returnData = "Here are your builds after " + marker + " " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
@@ -99,6 +115,10 @@ function processQuery(query, username, callback){
             returnData.push("<" + contents.servers[i].html_url + "|" + contents.servers[i].dns_name + ">");
           }
           returnData = "Here are your servers" + " " + username + ":\n" + returnData.join("\n");
+          callback(returnData);
+        }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -119,6 +139,10 @@ function processQuery(query, username, callback){
           returnData = "Here are your servers after " + marker + " " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
@@ -133,6 +157,10 @@ function processQuery(query, username, callback){
             returnData.push(contents.envs[i].app_name + ' / ' + "<" + contents.envs[i].html_url + "|" + contents.envs[i].name + ">");
           }
           returnData = "Here are your envs" + " " + username + ":\n" + returnData.join("\n");
+          callback(returnData);
+        }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -153,6 +181,10 @@ function processQuery(query, username, callback){
           returnData = "Here are your envs for app " + appName + " " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
@@ -169,6 +201,10 @@ function processQuery(query, username, callback){
             returnData.push("<" + contents.envs[i].html_url + "|" + contents.envs[i].name + ">");
           }
           returnData = "Here are your envs after " + marker + " " + username + ":\n" + returnData.join("\n");
+          callback(returnData);
+        }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -189,6 +225,10 @@ function processQuery(query, username, callback){
           returnData = "Here are the servers associate with env" + envName + " " + username + ":\n" + returnData.join("\n");
           callback(returnData);
         }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
+          callback(returnData);
+        }
       })
   }
 
@@ -201,6 +241,10 @@ function processQuery(query, username, callback){
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           returnData = "App *" + appName + "* has been created"  + " " + username + " :thumbsup:";
+          callback(returnData);
+        }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -217,6 +261,10 @@ function processQuery(query, username, callback){
         if(!error && response.statusCode == 200) {
           var contents = JSON.parse(body);
           returnData = "Env *" + envName + "* has been created" + " " + username + "  :thumbsup:";
+          callback(returnData);
+        }
+        else{
+          returnData = "Uh-oh, looks like something went wrong " + " " + username + "!";
           callback(returnData);
         }
       })
@@ -253,7 +301,7 @@ function processQuery(query, username, callback){
           var contents = JSON.parse(body);
           var returnData = [];
           for(var i = 0; i < contents.releases.length; i++){
-            returnData.push("<" + contents.releases[i].html_url + "|" + contents.releases[i].release_version + ": "
+            returnData.push("<" + contents.releases[i].html_url + " | " + contents.releases[i].release_version + ": "
               + contents.releases[i].description + ">");
           }
           returnData = "Here are your releases for " + appName + ", " + username + ":\n" + returnData.join("\n");
