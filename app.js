@@ -384,19 +384,19 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
 
   //Help
   else if(query == 'help'){
-    returnData = "Here are the commands I recognize:\n•List Apps\n•List Builds\n•List Envs\n•List Servers\n" +
-    "•List Servers for Env [Env Name]\n•List Release for App [App Name]\n•Create App [App Name]\n" +
-    "•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
-    "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
+    returnData = "Here are the commands I recognize:\n• List Apps\n• List Builds\n• List Envs\n• List Servers\n" +
+    "• List Servers for Env [Env Name]\n• List Release for App [App Name]\n• Create App [App Name]\n" +
+    "• Create Env [Env Name] for App [AppName]\n• Restart Env [Env Name]\n• Latest release for app [appName]\n" +
+    "• Deploy latest to env [envName]\n• List Envs for App [AppName]";
     callback(returnData);
   }
 
   //If command is not understood
   else{
-    returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n•List Apps\n" +
-    "•List Builds\n•List Envs\n•List Servers\n•List Servers for Env [Env Name]\n•List Release for App [App Name]\n" +
-    "•Create App [App Name]\n•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
-    "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
+    returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n• List Apps\n" +
+    "• List Builds\n• List Envs\n• List Servers\n• List Servers for Env [Env Name]\n• List Release for App [App Name]\n" +
+    "• Create App [App Name]\n• Create Env [Env Name] for App [AppName]\n• Restart Env [Env Name]\n• Latest release for app [appName]\n" +
+    "• Deploy latest to env [envName]\n• List Envs for App [AppName]";
     callback(returnData);
   }
 }
