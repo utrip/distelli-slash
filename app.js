@@ -19,8 +19,7 @@ app.post('/', function(req, res, callback){
 
 function processQuery(slacktoken, slackteam_id, query, username, callback){
   if((slacktoken != secrets.slack.token) || (slackteam_id != secrets.slack.team)){
-     returnData = "Bad slack creds! " + secrets.slack.token + "," +  secrets.slack.team;
-     returnData += "," + slacktoken + "," + slackteam_id;
+     returnData = "Bad slack creds!";
      callback(returnData);
   }
 
