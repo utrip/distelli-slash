@@ -338,7 +338,7 @@ function processQuery(query, username, callback){
       + secrets.distelli.apiToken, function (error, response, body) {
         var contents = JSON.parse(body);
         var appName = contents.env.app_name;
-        request('https://api.distelli.com/' + secrets.distelli.username + '/apps/' + 'distelli-bot?apiToken='
+        request('https://api.distelli.com/' + secrets.distelli.username + '/apps/' + appName + '?apiToken='
           + secrets.distelli.apiToken, function (error, response, body) {
             var appContents = JSON.parse(body);
             var latestRelease = appContents.app.latest_release.release_version;
