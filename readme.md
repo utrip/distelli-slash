@@ -14,7 +14,7 @@ Build and deploy your app entirely from Slack w/ the Slash command: `/distelli`.
 7. Build your application **DistelliSlash**.
 8. Add a server and deploy the latest release of **DistelliSlash** to environment **DistelliSlash-Prod**.
 9. Create an apiToken. (https://www.distelli.com/username/settings?section=API)
-10. Create the following environment variables on environment **distellislash-prod**: `USERNAME=your-userName` & `APITOKEN=your-apiToken` (https://www.distelli.com/username/envs/distellislash-prod)
+10. Create the following environment variables on environment **distellislash-prod**: `USERNAME=your-userName`, `SLACKTOKEN=your-slacktoken`, `SLACKTEAM_ID=your-slackteamid & `APITOKEN=your-apiToken` (https://www.distelli.com/username/envs/distellislash-prod)
 
 ###Set up in Slack
 1. Navigate to https://username.slack.com/services/new/slash-commands
