@@ -21,7 +21,7 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
   if((slacktoken != secrets.slack.token) || (slackteam_id != secrets.slack.team)){
      returnData = "Bad slack creds! ";
      returnData += slacktoken + "," + slackteam_id + "," + query + "," + username;
-     rerurnData += 'Stored data: ' + secrets.slack.token + "," +  secrets.slack.team;
+     rerurnData += "Stored data: " + secrets.slack.token + "," +  secrets.slack.team;
      callback(returnData);
   }
 
