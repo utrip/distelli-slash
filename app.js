@@ -9,13 +9,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/', function(req, res, callback){
   var query = req.body.text;
-  var username = req.body.user_name
-  processQuery(query, username, function(returnData){
+  var username = req.body.user_name;
+  var slacktoken = req.body.token;
+  var slackteam_id = req.body.team_id;
+  processQuery(slacktoken, slackteam_id, query, username, function(returnData){
     res.send(returnData);
   })
 });
 
-function processQuery(query, username, callback){
+function processQuery(slacktoken, slackteam_id, query, username, callback){
+  if((slacktoken != secrets.slack.token) || (slackteam_id != secrets.slack.team)){
+     returnData = "Bad slack creds!";
+     callback(returnData);
+  }
+
   query = query.toLowerCase();
 
   //List apps
