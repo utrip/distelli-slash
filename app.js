@@ -361,12 +361,11 @@ function processQuery(query, username, callback){
                     callback(returnData);
                   }
                 })
-            }
-            else{
-            returnData = "We couldn't find that env, " + username + "!";
-            callback(returnData);
-          }
-
+              }
+              else{
+                returnData = "We couldn't find that env, " + username + "!";
+                callback(returnData);
+              }
             })
           }
           else{
