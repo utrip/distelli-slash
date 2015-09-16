@@ -25,17 +25,17 @@ It should look something like this when you're done:
 ![Alt text](https://monosnap.com/file/IEcnSl09wWXPaHDTEAMpPpXxBXqayz.png)
 
 ##Things you can do:
-1. `/Distelli List Apps`: List all apps associated with your Distelli account. Use the command `List Apps After [AppName]` to see the next page of results.
-2. `/Distelli List Envs`: List all envs associated with your Distelli account. Use the command `List Envs After [EnvName]` to see the next page of results.
-3. `/Distelli List Envs for [AppName]`: List all envs associated with a Distelli app.
-4. `/Distelli List Builds`: List all builds associated with your Distelli account. Use the command `List Builds After [BuildNum]` to see the next page of results.
-5. `/Distelli List Servers`: List all servers associated with your Distelli account. Use the command `List Servers After [ServerName]` to see the next page of results.
-6. `/Distelli List Servers for Env [EnvName]`: List all servers associated with an app enviroment.
-7. `/Distelli List Releases for App [AppName]`: List all releases associated with an app.
-8. `Create App [App Name]`: Create a Distelli application.
-9. `/Distelli Create Env [Env Name] for app [AppName]`: Create a Distelli environment.
-10. `/Distelli Restart Env [Env Name]`: Restart an existing environment.
-11. `/Distelli Latest release for app [appName]`: Get information on the latest release associated with an app.
-12. `/Distelli Deploy latest to env [envName]`: Deploy the latest release to an environment.
+1. `/distelli List Apps`: List all apps associated with your Distelli account. Use the command `List Apps After [AppName]` to see the next page of results.
+2. `/distelli List Envs`: List all envs associated with your Distelli account. Use the command `List Envs After [EnvName]` to see the next page of results.
+3. `/distelli List Envs for [AppName]`: List all envs associated with a Distelli app.
+4. `/distelli List Builds`: List all builds associated with your Distelli account. Use the command `List Builds After [BuildNum]` to see the next page of results.
+5. `/distelli List Servers`: List all servers associated with your Distelli account. Use the command `List Servers After [ServerName]` to see the next page of results.
+6. `/distelli List Servers for Env [EnvName]`: List all servers associated with an app enviroment.
+7. `/distelli List Releases for App [AppName]`: List all releases associated with an app.
+8. `/distelli Create App [App Name]`: Create a Distelli application.
+9. `/distelli Create Env [Env Name] for app [AppName]`: Create a Distelli environment.
+10. `/distelli Restart Env [Env Name]`: Restart an existing environment.
+11. `/distelli Latest release for app [appName]`: Get information on the latest release associated with an app.
+12. `/distelli Deploy latest to env [envName]`: Deploy the latest release to an environment.
 
 Shoot me an email (alex at distelli.com) if you need a hand with setup!
