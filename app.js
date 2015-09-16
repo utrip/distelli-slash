@@ -340,6 +340,7 @@ function processQuery(query, username, callback){
     var envName = queryArray[4];
     request('https://api.distelli.com/' + secrets.distelli.username + '/envs/' + envName + '?apiToken='
       + secrets.distelli.apiToken, function (error, response, body) {
+        if(!error && response.statusCode == 200) {
         var contents = JSON.parse(body);
         var appName = contents.env.app_name;
         request('https://api.distelli.com/' + secrets.distelli.username + '/apps/' + appName + '?apiToken='
@@ -360,6 +361,12 @@ function processQuery(query, username, callback){
                 }
               })
           })
+        }
+        else{
+          returnData = "We couldn't find env " + envName + ", " + username + "!";
+          callback(returnData);
+
+        }
       })
   }
 
