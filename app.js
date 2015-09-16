@@ -346,7 +346,7 @@ function processQuery(query, username, callback){
               + secrets.distelli.username + '/envs/' + envName + '/deploy' + '?apiToken='+ secrets.distelli.apiToken + '',
               body: JSON.stringify({"release_version": latestRelease, "description": "Deploy via Slack by " + username})}, function (error, response, body) {
                 var releaseContents = JSON.parse(body);
-                returnData ="<" + releaseContents.deployment.html_url + "|" + "Release " + latestRelease + " has been deployed to env" + envName + " " + username + " !" + ">";
+                returnData ="<" + releaseContents.deployment.html_url + "|" + "Release " + latestRelease + " has been deployed to env " + envName + " " + username + " !" + ">";
                 callback(returnData);
               })
           })
