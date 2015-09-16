@@ -327,6 +327,10 @@ function processQuery(query, username, callback){
           contents.releases[0].release_version + ": " + contents.releases[0].description;
           callback(returnData);
         }
+        else{
+          returnData = "We couldn't find app " + appName + ", " + username + "!";
+          callback(returnData);
+        }
       })
    }
 
@@ -345,9 +349,15 @@ function processQuery(query, username, callback){
             request.post({headers: {'content-type' : 'application/json'}, url: 'https://api.distelli.com/'
               + secrets.distelli.username + '/envs/' + envName + '/deploy' + '?apiToken='+ secrets.distelli.apiToken + '',
               body: JSON.stringify({"release_version": latestRelease, "description": "Deploy via Slack by " + username})}, function (error, response, body) {
-                var releaseContents = JSON.parse(body);
-                returnData ="<" + releaseContents.deployment.html_url + "|" + "Release " + latestRelease + " has been deployed to env " + envName + " " + username + " !" + ">";
-                callback(returnData);
+                if(!error && response.statusCode == 200) {
+                  var releaseContents = JSON.parse(body);
+                  returnData ="<" + releaseContents.deployment.html_url + "|" + "Release " + latestRelease + " has been deployed to env " + envName + " " + username + " !" + ">";
+                  callback(returnData);
+                }
+                else{
+                  returnData = "We couldn't find env " + envName + ", " + username + "!";
+                  callback(returnData);
+                }
               })
           })
       })
