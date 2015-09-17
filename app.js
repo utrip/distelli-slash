@@ -23,7 +23,7 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
      callback(returnData);
   }
 
-  query = query.toLowerCase();
+  query = query.toLowerCase().trim();
 
   //List apps
   if(query == "list apps"){
@@ -174,7 +174,7 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
   }
 
   //List envs for app [appName]
-  else if(query == "list envs for app"){
+  else if(query.match(/^list envs for app /i)){
     var queryArray = query.split(" ");
     var appName = queryArray[4];
      request('https://api.distelli.com/' + secrets.distelli.username + '/apps/' + appName + '/envs?apiToken='
